@@ -14,7 +14,6 @@ export default function PetCard(props: Props) {
   const ageInMilliseconds =
     new Date().getTime() - new Date(props.pet.birthdate).getTime();
   const age = Math.floor(ageInMilliseconds / 31536000000);
-  console.log(props.pet);
 
   return (
     <section className="pet-card">

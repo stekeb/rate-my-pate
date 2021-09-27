@@ -5,7 +5,6 @@ import { PetModel } from "../infrastructure/model/Pet";
 import { RatingModel } from "../infrastructure/model/Rating";
 import { Rating } from "../domain/Rating";
 
-
 /**
  * adds a rating to a pet with id `petId`. Pass attributes `value` and `date` to the `rating` parameter.
  */

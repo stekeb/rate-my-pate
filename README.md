@@ -91,44 +91,43 @@ What did you think of the tasks? Was it too much / too easy / too ambiguous?
 I would have changed the "petroutes" to a pure distributor (e.g. "router.get("/", loadPets);" "router.get("/:id", loadPet);") and change the functions in "petsRepository to e.g.:
 
 // export async function loadPets(
-// 	req: express.Request,
-// 	res: express.Response
+// req: express.Request,
+// res: express.Response
 // ): Promise<void> {
-// 	try {
-// 		const petsModel = await Pets.findAll({
-// 			include: [Ratings],
-// 		});
-// 		res.status(200);
-// 		res.send(petsModel.map(convertToDomainObject));
-// 	} catch (error) {
-// 		console.log(error);
-// 		res.status(400);
-// 	}
+// try {
+// const petsModel = await Pets.findAll({
+// include: [Ratings],
+// });
+// res.status(200);
+// res.send(petsModel.map(convertToDomainObject));
+// } catch (error) {
+// console.log(error);
+// res.status(400);
+// }
 // }
 
 or
 
-
 // export async function loadPet(
-// 	req: express.Request,
-// 	res: express.Response
+// req: express.Request,
+// res: express.Response
 // ): Promise<void> {
-// 	try {
-// 		const petId: string = req.params.id;
-// 		const id = Number.parseInt(petId, 10);
+// try {
+// const petId: string = req.params.id;
+// const id = Number.parseInt(petId, 10);
 
-// 		const petsModel = await Pets.findByPk(id, {
-// 			include: [Ratings],
-// 		});
-// 		if (petsModel === null) {
-// 			throw Error("not found");
-// 		}
-// 		res.status(200);
-// 		res.send(convertToDomainObject(petsModel));
-// 	} catch (error) {
-// 		console.log(error);
-// 		res.sendStatus(404);
-// 	}
+// const petsModel = await Pets.findByPk(id, {
+// include: [Ratings],
+// });
+// if (petsModel === null) {
+// throw Error("not found");
+// }
+// res.status(200);
+// res.send(convertToDomainObject(petsModel));
+// } catch (error) {
+// console.log(error);
+// res.sendStatus(404);
+// }
 // }
 
 However, this broke the already passing tests.

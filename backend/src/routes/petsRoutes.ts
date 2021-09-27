@@ -38,19 +38,17 @@ router.put("/:id", async function (req, res) {
 		date: currentDate,
 	};
 	try {
-		if(rating.value > 0 && rating.value < 6) {
+		if (rating.value > 0 && rating.value < 6) {
 			const rateResponse = await addRating(Number.parseInt(petId, 10), rating);
 			res.send(rateResponse);
 		} else {
-			res.send("Invalid Rating Value")
-			res.status(400)
+			res.send("Invalid Rating Value");
+			res.status(400);
 		}
-		
 	} catch (error) {
 		console.log(error);
 		res.sendStatus(404);
 	}
 });
-
 
 export const petsRoutes = router;
