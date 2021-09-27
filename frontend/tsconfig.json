@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react",
+    "noEmit": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": ["./node_modules", "jest.config.js"],
+  "include": ["src"]
+}

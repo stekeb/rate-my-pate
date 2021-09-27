@@ -1,0 +1,25 @@
+.pet-card {
+  margin: 16px;
+  min-height: 20vh;
+  background-color: #ddddff;
+}
+
+.pet-card--img {
+  width: 100%;
+  position: relative;
+}
+
+.birthdayhat--img {
+  width: 50px;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+.background {
+  max-width: 30%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

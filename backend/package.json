@@ -1,0 +1,37 @@
+{
+	"name": "rate-my-pet-backend",
+	"version": "0.0.0",
+	"description": "Backend for Lofino coding challenge",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "npm run dev",
+		"test": "./node_modules/.bin/jest",
+		"build": "./node_modules/.bin/tsc && npm run copy-files",
+		"dev": "./node_modules/.bin/ts-node-dev --respawn ./src/index.ts"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1",
+		"sequelize": "^5.22.4",
+		"sqlite3": "^4.2.0",
+		"uuid": "^3.4.0"
+	},
+	"devDependencies": {
+		"@types/bluebird": "^3.5.36",
+		"@types/express": "^4.17.13",
+		"@types/jest": "^27.0.2",
+		"@types/node": "^12.20.26",
+		"@types/react-router-dom": "^5.3.0",
+		"@typescript-eslint/eslint-plugin": "^2.34.0",
+		"@typescript-eslint/parser": "^2.34.0",
+		"eslint": "^6.8.0",
+		"jest": "^27.2.1",
+		"nodemon": "^2.0.12",
+		"prettier": "^1.19.1",
+		"ts-jest": "^27.0.5",
+		"ts-node": "^10.2.1",
+		"ts-node-dev": "^1.1.8",
+		"typescript": "^3.9.10"
+	}
+}
